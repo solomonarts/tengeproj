@@ -69,7 +69,7 @@ const GetInvolved = () => {
             stories! Join the chat and share your ideas on X!
           </p>
           <a
-            href="https://x.com/TengeTengeMovement"
+            href="https://x.com/officialtenge"
             target="_blank"
             className="px-8 py-3 text-lg font-bold text-white transition duration-300 ease-in-out transform bg-gray-800 rounded-full shadow-lg hover:bg-gray-900 hover:scale-105"
           >
