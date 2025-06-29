@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.adf28d8a.css",
-    "main.js": "/static/js/main.aae2a1dc.js",
-    "static/js/453.b3561505.chunk.js": "/static/js/453.b3561505.chunk.js",
-    "static/media/impact.png": "/static/media/impact.a448f8d80d40ac62ce0f.png",
-    "static/media/tengeblocks.png": "/static/media/tengeblocks.cfe3e91c36e6cb5bd67f.png",
-    "static/media/Chewy-Regular.ttf": "/static/media/Chewy-Regular.e94e4ae6b454c4a3e69c.ttf",
-    "static/media/tengelogo.JPG": "/static/media/tengelogo.53a165e70e1343905213.JPG",
-    "static/media/nian.jpg": "/static/media/nian.62c7760ee9ebf4c18454.jpg",
-    "index.html": "/index.html",
-    "main.adf28d8a.css.map": "/static/css/main.adf28d8a.css.map",
-    "main.aae2a1dc.js.map": "/static/js/main.aae2a1dc.js.map",
-    "453.b3561505.chunk.js.map": "/static/js/453.b3561505.chunk.js.map"
+    "main.css": "/tengeproj/static/css/main.d1637718.css",
+    "main.js": "/tengeproj/static/js/main.6e8ed5b3.js",
+    "static/js/453.b3561505.chunk.js": "/tengeproj/static/js/453.b3561505.chunk.js",
+    "static/media/impact.png": "/tengeproj/static/media/impact.a448f8d80d40ac62ce0f.png",
+    "static/media/tengeblocks.png": "/tengeproj/static/media/tengeblocks.cfe3e91c36e6cb5bd67f.png",
+    "static/media/Chewy-Regular.ttf": "/tengeproj/static/media/Chewy-Regular.e94e4ae6b454c4a3e69c.ttf",
+    "static/media/tengelogo.JPG": "/tengeproj/static/media/tengelogo.53a165e70e1343905213.JPG",
+    "static/media/nian.jpg": "/tengeproj/static/media/nian.62c7760ee9ebf4c18454.jpg",
+    "index.html": "/tengeproj/index.html",
+    "main.d1637718.css.map": "/tengeproj/static/css/main.d1637718.css.map",
+    "main.6e8ed5b3.js.map": "/tengeproj/static/js/main.6e8ed5b3.js.map",
+    "453.b3561505.chunk.js.map": "/tengeproj/static/js/453.b3561505.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.adf28d8a.css",
-    "static/js/main.aae2a1dc.js"
+    "static/css/main.d1637718.css",
+    "static/js/main.6e8ed5b3.js"
   ]
 }
