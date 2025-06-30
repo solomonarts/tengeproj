@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative bg-gradient-to-br from-blue-500 to-purple-600 text-white py-24 md:py-32 overflow-hidden rounded-bl-[4rem] rounded-br-[4rem] shadow-2xl crypto-pattern border-b-4 border-purple-700"
+      className="relative bg-gradient-to-br from-blue-500 to-purple-600 text-white py-20 md:py-24 overflow-hidden rounded-bl-[4rem] rounded-br-[4rem] shadow-2xl crypto-pattern border-b-4 border-purple-700"
     >
       <div className="container relative z-10 p-4 mx-auto text-center">
         <h1

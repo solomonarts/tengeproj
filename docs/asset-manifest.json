@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tengeproj/static/css/main.25e15023.css",
-    "main.js": "/tengeproj/static/js/main.f40b7dc1.js",
+    "main.css": "/tengeproj/static/css/main.50166065.css",
+    "main.js": "/tengeproj/static/js/main.6a2f48b0.js",
     "static/js/453.b3561505.chunk.js": "/tengeproj/static/js/453.b3561505.chunk.js",
     "static/media/tengeblocks.png": "/tengeproj/static/media/tengeblocks.cfe3e91c36e6cb5bd67f.png",
     "static/media/impact.jpg": "/tengeproj/static/media/impact.707eb384920d3109180a.jpg",
@@ -11,12 +11,12 @@
     "static/media/icons8-instagram-logo-100.png": "/tengeproj/static/media/icons8-instagram-logo-100.0c689c145d195ebc9f87.png",
     "static/media/icons8-youtube-logo-100.png": "/tengeproj/static/media/icons8-youtube-logo-100.b0af05fc40ddbdc4fbce.png",
     "index.html": "/tengeproj/index.html",
-    "main.25e15023.css.map": "/tengeproj/static/css/main.25e15023.css.map",
-    "main.f40b7dc1.js.map": "/tengeproj/static/js/main.f40b7dc1.js.map",
+    "main.50166065.css.map": "/tengeproj/static/css/main.50166065.css.map",
+    "main.6a2f48b0.js.map": "/tengeproj/static/js/main.6a2f48b0.js.map",
     "453.b3561505.chunk.js.map": "/tengeproj/static/js/453.b3561505.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.25e15023.css",
-    "static/js/main.f40b7dc1.js"
+    "static/css/main.50166065.css",
+    "static/js/main.6a2f48b0.js"
   ]
 }
