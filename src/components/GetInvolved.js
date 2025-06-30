@@ -196,8 +196,8 @@ const GetInvolved = () => {
           title="Copy network Address"
           style={{ fontFamily: '"Luckiest Guy", cursive' }}
         >
-          <div className="flex items-center justify-center">
-            <div className="flex justify-between gap-10 m-auto">
+          <div className="flex flex-col items-center justify-center">
+            <div className="flex gap-16 m-auto justify-evenly">
               <Button
                 size="large"
                 shape="circle"
@@ -223,6 +223,16 @@ const GetInvolved = () => {
                 <img src={sollogo} className="w-20 h-auto" />
               </Button>
             </div>
+            <div className="flex justify-center gap-20 m-auto mt-2">
+              <p>Copy bc1q7...</p>
+              <p>Copy 0x993...</p>
+              <p>Copy 5mjnd...</p>
+            </div>
+            {/* <div className="flex gap-24 m-auto mt-2 justify-evenly">
+              <p>Copy</p>
+              <p>Copy</p>
+              <p>Copy</p>
+            </div> */}
           </div>
         </Modal>
       </section>

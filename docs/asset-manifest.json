@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tengeproj/static/css/main.5a4b9f3f.css",
-    "main.js": "/tengeproj/static/js/main.99581376.js",
+    "main.css": "/tengeproj/static/css/main.da838b29.css",
+    "main.js": "/tengeproj/static/js/main.a629238f.js",
     "static/js/453.b3561505.chunk.js": "/tengeproj/static/js/453.b3561505.chunk.js",
     "static/media/tengeblocks.png": "/tengeproj/static/media/tengeblocks.cfe3e91c36e6cb5bd67f.png",
     "static/media/impact.jpg": "/tengeproj/static/media/impact.707eb384920d3109180a.jpg",
@@ -9,12 +9,12 @@
     "static/media/Chewy-Regular.ttf": "/tengeproj/static/media/Chewy-Regular.e94e4ae6b454c4a3e69c.ttf",
     "static/media/nian.jpg": "/tengeproj/static/media/nian.62c7760ee9ebf4c18454.jpg",
     "index.html": "/tengeproj/index.html",
-    "main.5a4b9f3f.css.map": "/tengeproj/static/css/main.5a4b9f3f.css.map",
-    "main.99581376.js.map": "/tengeproj/static/js/main.99581376.js.map",
+    "main.da838b29.css.map": "/tengeproj/static/css/main.da838b29.css.map",
+    "main.a629238f.js.map": "/tengeproj/static/js/main.a629238f.js.map",
     "453.b3561505.chunk.js.map": "/tengeproj/static/js/453.b3561505.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a4b9f3f.css",
-    "static/js/main.99581376.js"
+    "static/css/main.da838b29.css",
+    "static/js/main.a629238f.js"
   ]
 }
