@@ -1,31 +1,32 @@
 // Footer Component
+import xtwiter from "../assets/images/icons8-x-logo-100-w.png";
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white p-8 text-center rounded-t-xl mt-16">
+    <footer className="p-8 mt-16 text-center text-white bg-gray-800 rounded-t-xl">
       <div className="container mx-auto">
-        <div className="flex justify-center space-x-6 mb-6">
+        <div className="flex justify-center mb-6 space-x-6">
           <a
             href="#"
-            className="text-white hover:text-blue-400 text-2xl transform hover:scale-125 transition duration-300"
+            className="text-2xl text-white transition duration-300 transform hover:text-blue-400 hover:scale-125"
           >
             <i className="fab fa-facebook"></i>
           </a>
           <a
-            href="https://x.com/TengeTengeMovement"
+            href="https://x.com/officialTenge"
             target="_blank"
-            className="text-white hover:text-blue-400 text-2xl transform hover:scale-125 transition duration-300"
+            className="text-2xl text-white transition duration-300 transform hover:text-blue-400 hover:scale-125"
           >
-            <i className="fab fa-x-twitter"></i>
+            <img src={xtwiter} className="w-8 h-auto" />
           </a>
           <a
             href="#"
-            className="text-white hover:text-blue-400 text-2xl transform hover:scale-125 transition duration-300"
+            className="text-2xl text-white transition duration-300 transform hover:text-blue-400 hover:scale-125"
           >
             <i className="fab fa-instagram"></i>
           </a>
           <a
             href="#"
-            className="text-white hover:text-blue-400 text-2xl transform hover:scale-125 transition duration-300"
+            className="text-2xl text-white transition duration-300 transform hover:text-blue-400 hover:scale-125"
           >
             <i className="fab fa-youtube"></i>
           </a>
