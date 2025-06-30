@@ -201,7 +201,7 @@ const GetInvolved = () => {
               <Button
                 size="large"
                 shape="circle"
-                className="w-24 h-24 p-2"
+                className="w-16 h-16 p-2 md:w-24 md:h-24"
                 onClick={() => handleCopyaddress("bnb")}
               >
                 <img src={bnblogo} className="w-20 h-auto" />
@@ -209,7 +209,7 @@ const GetInvolved = () => {
               <Button
                 size="large"
                 shape="circle"
-                className="w-24 h-24 p-2"
+                className="w-16 h-16 p-2 md:w-24 md:h-24"
                 onClick={() => handleCopyaddress("btc")}
               >
                 <img src={btclogo} className="w-20 h-auto" />
@@ -217,13 +217,13 @@ const GetInvolved = () => {
               <Button
                 size="large"
                 shape="circle"
-                className="w-24 h-24 p-2"
+                className="w-16 h-16 p-2 md:w-24 md:h-24"
                 onClick={() => handleCopyaddress("sol")}
               >
                 <img src={sollogo} className="w-20 h-auto" />
               </Button>
             </div>
-            <div className="flex justify-center gap-20 m-auto mt-2">
+            <div className="flex justify-center gap-10 m-auto mt-2 md:gap-20">
               <p>Copy bc1q7...</p>
               <p>Copy 0x993...</p>
               <p>Copy 5mjnd...</p>
