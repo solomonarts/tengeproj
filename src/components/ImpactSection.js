@@ -1,5 +1,5 @@
 // Impact Flow Section
-import impactpic from "../assets/images/impact.png";
+import impactpic from "../assets/images/impact.jpg";
 const ImpactSection = () => {
   return (
     <section
@@ -99,7 +99,7 @@ const ImpactSection = () => {
         <img
           src={impactpic}
           alt="Fun impact flow animation idea"
-          className="object-cover mx-auto shadow-md rounded-xl"
+          className="object-contain mx-auto shadow-md rounded-xl"
         />
       </div>
     </section>

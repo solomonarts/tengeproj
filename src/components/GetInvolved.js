@@ -1,5 +1,80 @@
 // Get Involved Section Component
+import { Modal, Button, notification } from "antd";
+import { useState } from "react";
+import bnblogo from "../assets/images/icons8-bnb-100.png";
+import btclogo from "../assets/images/icons8-bitcoin-100.png";
+import sollogo from "../assets/images/icons8-solana-100.png";
 const GetInvolved = () => {
+  const [opnModal, setOpenModal] = useState(false);
+  const btcadd = "bc1q7w5wwrdsj2m379mgfuvc25ytdrsw7l3f6s9gah";
+  const bnbadd = "0x993178a14721548f7b03a6824983468fae531c93";
+  const soladd = "5mjndvmv3Wzem2cmiXGunw42aDoBv7kbpvxDmGwPSDQo";
+  const handleModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCancel = () => {
+    setOpenModal(false);
+  };
+
+  const handleCopyaddress = async (chain) => {
+    switch (chain) {
+      case "btc":
+        try {
+          await navigator.clipboard.writeText(btcadd);
+          notification.success({
+            message: "Copied!",
+            description: "BTC address copied to clipboard.",
+            placement: "bottomRight",
+          });
+        } catch (err) {
+          notification.error({
+            message: "Failed",
+            description: "Could not copy the address.",
+            placement: "bottomRight",
+          });
+        }
+        break;
+
+      case "bnb":
+        try {
+          await navigator.clipboard.writeText(bnbadd);
+          notification.success({
+            message: "Copied!",
+            description: "BNB address copied to clipboard.",
+            placement: "bottomRight",
+          });
+        } catch (err) {
+          notification.error({
+            message: "Failed",
+            description: "Could not copy the address.",
+            placement: "bottomRight",
+          });
+        }
+        break;
+
+      case "sol":
+        try {
+          await navigator.clipboard.writeText(soladd);
+          notification.success({
+            message: "Copied!",
+            description: "Solana address copied to clipboard.",
+            placement: "bottomRight",
+          });
+        } catch (err) {
+          notification.error({
+            message: "Failed",
+            description: "Could not copy the address.",
+            placement: "bottomRight",
+          });
+        }
+        break;
+
+      default:
+        break;
+    }
+  };
+
   return (
     <section
       id="involved"
@@ -19,7 +94,7 @@ const GetInvolved = () => {
         superpower:{" "}
         <strong>A world where NO child is left out of the future!</strong>
       </p>
-      <div className="grid items-center gap-8 text-center md:grid-cols-3">
+      <div className="grid items-center gap-8 m-auto text-center md:grid-cols-2">
         <div className="p-6 transition duration-300 transform bg-white shadow-md rounded-2xl hover:translate-y-2 animate-pop-in">
           <i className="mb-4 text-5xl text-blue-600 fas fa-hand-holding-dollar animate-bounce-slow"></i>
           <h3
@@ -33,11 +108,14 @@ const GetInvolved = () => {
             young minds into the universe of knowledge! You're an education
             superhero!
           </p>
-          <button className="px-8 py-3 text-lg font-bold text-white transition duration-300 ease-in-out transform bg-blue-500 rounded-full shadow-lg hover:bg-blue-600 hover:scale-105">
+          <button
+            onClick={handleModal}
+            className="px-8 py-3 text-lg font-bold text-white transition duration-300 ease-in-out transform bg-blue-500 rounded-full shadow-lg hover:bg-blue-600 hover:scale-105"
+          >
             Give a Little Magic! <i className="ml-2 fas fa-star"></i>
           </button>
         </div>
-        <div className="p-6 transition duration-300 delay-200 transform bg-white shadow-md rounded-2xl hover:translate-y-2 animate-pop-in">
+        {/* <div className="p-6 transition duration-300 delay-200 transform bg-white shadow-md rounded-2xl hover:translate-y-2 animate-pop-in">
           <i className="mb-4 text-5xl text-purple-600 fas fa-puzzle-piece animate-bounce-slow"></i>
           <h3
             className="mb-4 text-3xl font-bold text-purple-600"
@@ -55,7 +133,7 @@ const GetInvolved = () => {
               Unleash Your Power! <i className="ml-2 fas fa-bolt"></i>
             </button>
           </a>
-        </div>
+        </div> */}
         <div className="p-6 transition duration-300 transform bg-white shadow-md rounded-2xl hover:translate-y-2 animate-pop-in delay-400">
           <i className="mb-4 text-5xl text-gray-800 fab fa-x-twitter icon-bounce"></i>
           <h3
@@ -77,6 +155,44 @@ const GetInvolved = () => {
           </a>
         </div>
       </div>
+
+      <Modal
+        open={opnModal}
+        centered
+        onCancel={handleCancel}
+        onOk={handleCancel}
+        footer={false}
+        title="Copy network Address"
+      >
+        <div className="flex items-center justify-center">
+          <div className="flex justify-between gap-10 m-auto">
+            <Button
+              size="large"
+              shape="circle"
+              className="w-24 h-24 p-2"
+              onClick={() => handleCopyaddress("bnb")}
+            >
+              <img src={bnblogo} className="w-20 h-auto" />
+            </Button>
+            <Button
+              size="large"
+              shape="circle"
+              className="w-24 h-24 p-2"
+              onClick={() => handleCopyaddress("btc")}
+            >
+              <img src={btclogo} className="w-20 h-auto" />
+            </Button>
+            <Button
+              size="large"
+              shape="circle"
+              className="w-24 h-24 p-2"
+              onClick={() => handleCopyaddress("sol")}
+            >
+              <img src={sollogo} className="w-20 h-auto" />
+            </Button>
+          </div>
+        </div>
+      </Modal>
     </section>
   );
 };

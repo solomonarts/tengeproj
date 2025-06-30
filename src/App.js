@@ -48,7 +48,7 @@ const App = () => {
   }, [isNavOpen]); // Re-run effect if isNavOpen changes
 
   return (
-    <div className="text-gray-800 antialiased">
+    <div className="antialiased text-gray-800">
       {/* Font Awesome CSS Link (added directly for React App within Canvas) */}
       {/* <link
         rel="stylesheet"
@@ -64,6 +64,11 @@ const App = () => {
         href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
         rel="stylesheet"
       /> */}
+
+      <link
+        href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+        rel="stylesheet"
+      />
 
       {/* Header Component */}
       <Header isNavOpen={isNavOpen} toggleNav={toggleNav} />

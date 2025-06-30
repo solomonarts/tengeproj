@@ -60,7 +60,7 @@ const Header = ({ isNavOpen, toggleNav }) => {
               href="#partners"
               className="block p-2 mt-4 mr-4 text-gray-700 transition duration-300 ease-in-out rounded-lg lg:inline-block lg:mt-0 hover:text-blue-500 hover:bg-blue-100"
             >
-              Our Amazing Partners
+              Our Amazing Friends!
             </a>
             <a
               href="#involved"
