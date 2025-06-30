@@ -1,5 +1,5 @@
 {
-  "homepage": "https://solomonarts.github.io/tengeproj",
+  "homepage": ".",
   "name": "tengeproj",
   "version": "0.1.0",
   "private": true,
@@ -9,16 +9,19 @@
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^13.2.1",
     "antd": "^5.26.3",
+    "framer-motion": "^12.20.1",
     "postcss-loader": "^8.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
     "sass": "^1.89.2",
+    "source-map-explorer": "^2.5.3",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import insta from "../assets/images/icons8-instagram-logo-100.png";
-import tiktok from "../assets/images/icons8-tiktok-100.png";
+// import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+// import insta from "../assets/images/icons8-instagram-logo-100.png";
+// import tiktok from "../assets/images/icons8-tiktok-100.png";
 import xtwitter from "../assets/images/icons8-x-logo-100.png";
-import youtb from "../assets/images/icons8-youtube-logo-100.png";
+// import youtb from "../assets/images/icons8-youtube-logo-100.png";
 import "../assets/styles/socials.scss"; // You can style this as needed
 
 const socialPlatforms = [
@@ -25,30 +25,30 @@ const socialPlatforms = [
   //   { name: "TikTok", icon: tiktok, followers: 9500, color: "#000000", url: "" },
 ];
 
-const AnimatedCounter = ({ target }) => {
-  const [count, setCount] = useState(0);
+// const AnimatedCounter = ({ target }) => {
+//   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    let start = 0;
-    const end = target;
-    const duration = 2000; // 2 seconds
-    const stepTime = Math.max(Math.floor(duration / end), 20);
+//   useEffect(() => {
+//     let start = 0;
+//     const end = target;
+//     const duration = 2000; // 2 seconds
+//     const stepTime = Math.max(Math.floor(duration / end), 20);
 
-    const timer = setInterval(() => {
-      start += Math.ceil(end / (duration / stepTime));
-      if (start >= end) {
-        setCount(end);
-        clearInterval(timer);
-      } else {
-        setCount(start);
-      }
-    }, stepTime);
+//     const timer = setInterval(() => {
+//       start += Math.ceil(end / (duration / stepTime));
+//       if (start >= end) {
+//         setCount(end);
+//         clearInterval(timer);
+//       } else {
+//         setCount(start);
+//       }
+//     }, stepTime);
 
-    return () => clearInterval(timer);
-  }, [target]);
+//     return () => clearInterval(timer);
+//   }, [target]);
 
-  return <span>{count.toLocaleString()}</span>;
-};
+//   return <span>{count.toLocaleString()}</span>;
+// };
 
 const Socials = () => {
   return (
