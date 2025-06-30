@@ -26,7 +26,7 @@ const GetInvolved = () => {
         try {
           await navigator.clipboard.writeText(btcadd);
           api.info({
-            message: `Notification`,
+            message: `bc1q7w5wwrdsj2m379mgfuvc25ytdrsw7l3f6s9gah`,
             description: (
               <Context.Consumer>
                 {() => `BTC address copied to clipboard.`}
@@ -51,7 +51,7 @@ const GetInvolved = () => {
         try {
           await navigator.clipboard.writeText(bnbadd);
           api.info({
-            message: `Notification`,
+            message: `0x993178a14721548f7b03a6824983468fae531c93`,
             description: (
               <Context.Consumer>
                 {() => `BNB address copied to clipboard.`}
@@ -76,7 +76,7 @@ const GetInvolved = () => {
         try {
           await navigator.clipboard.writeText(soladd);
           api.info({
-            message: `Notification`,
+            message: `5mjndvmv3Wzem2cmiXGunw42aDoBv7kbpvxDmGwPSDQo`,
             description: (
               <Context.Consumer>
                 {() => `Solana address copied to clipboard.`}
@@ -224,9 +224,24 @@ const GetInvolved = () => {
               </Button>
             </div>
             <div className="flex justify-center gap-10 m-auto mt-2 md:gap-20">
-              <p>Copy bc1q7...</p>
-              <p>Copy 0x993...</p>
-              <p>Copy 5mjnd...</p>
+              <p
+                className="cursor-pointer"
+                onClick={() => handleCopyaddress("bnb")}
+              >
+                Copy 0x993...
+              </p>
+              <p
+                className="cursor-pointer"
+                onClick={() => handleCopyaddress("btc")}
+              >
+                Copy bc1q7...
+              </p>
+              <p
+                className="cursor-pointer"
+                onClick={() => handleCopyaddress("sol")}
+              >
+                Copy 5mjnd...
+              </p>
             </div>
             {/* <div className="flex gap-24 m-auto mt-2 justify-evenly">
               <p>Copy</p>
