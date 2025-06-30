@@ -1,5 +1,5 @@
 // Header Component
-import mainlogo from "../assets/images/tengelogo.JPG";
+import mainlogo from "../assets/images/tengelogo.png";
 const Header = ({ isNavOpen, toggleNav }) => {
   return (
     <header className="sticky top-0 z-50 p-4 bg-white shadow-lg rounded-b-xl">
