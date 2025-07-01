@@ -29,7 +29,7 @@ const ImpactSection = () => {
             1. Sparkly Seeds of Support!
           </h3>
           <p className="flex-grow text-md">
-            You send us "Tenge Tenge Tokens" (or regular donations!) like
+            You send us "You send us Crypto Tokens" (or regular donations!) like
             magical seeds. These seeds are your kindness, ready to grow!
           </p>
           <div className="mt-4 text-sm text-gray-500">
