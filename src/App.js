@@ -1,4 +1,78 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import custcursor from "./assets/icons/tengelogo.png";
+import dancing1 from "./assets/bg/tenge1.gif";
+import EventsSection from "./components/EventsSection";
+import applogo from "./assets/icons/tengelogo.png";
+
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <header className="tt-navbar">
+      <div className="flex items-center tt-logo ">
+        <img src={applogo} className="w-16 h-auto" /> Tengetenge
+      </div>
+      <nav className={`tt-menu ${menuOpen ? "active" : ""}`}>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div
+        className="tt-menu-toggle"
+        onClick={() => setMenuOpen((prev) => !prev)}
+      >
+        ☰
+      </div>
+    </header>
+  );
+};
+
+const CustomCursor = () => {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePos({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  return (
+    <div
+      className="custom-cursor"
+      style={{ left: `${mousePos.x}px`, top: `${mousePos.y}px` }}
+    >
+      <img src={custcursor} alt="cursor" />
+    </div>
+  );
+};
+
+const DancingBoy = () => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisible(true);
+      setTimeout(() => setVisible(false), 7000); // How long it stays on screen
+    }, 1 * 60 * 1000); // Every 2 minutes
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    visible && (
+      <div className="dancing-boy">
+        <img src={dancing1} alt="Dancing Boy" />
+      </div>
+    )
+  );
+};
 
 // Component for the character cards in the About section
 const CharacterCard = ({ imgSrc, name, description, bgColor }) => (
@@ -8,35 +82,38 @@ const CharacterCard = ({ imgSrc, name, description, bgColor }) => (
     <img
       src={imgSrc}
       alt={`Cartoon of ${name}`}
-      className="w-32 h-32 rounded-full mx-auto border-4 border-black"
+      className="w-32 h-32 mx-auto border-4 border-black rounded-full"
     />
-    <h3 className="text-2xl font-black mt-4">{name}</h3>
+    <h3 className="mt-4 text-2xl font-black">{name}</h3>
     <p className="mt-2 font-semibold">{description}</p>
   </div>
 );
 
 // Component for the main Hero section
 const HeroSection = () => (
-  <section className="hero-bg text-white text-center py-20 px-4 relative">
+  <section
+    id="home"
+    className="relative px-4 py-20 text-center text-white hero-bg"
+  >
     <div className="relative z-10">
-      <h1 className="text-4xl md:text-6xl font-black uppercase leading-tight">
+      <h1 className="text-4xl font-black leading-tight uppercase md:text-6xl">
         Crypto is too serious. <br />{" "}
         <span className="text-yellow-300">Tenge Tenge Movement</span> is here to
         mess things up.
       </h1>
-      <p className="text-lg md:text-2xl mt-4 font-bold">
+      <p className="mt-4 text-lg font-bold md:text-2xl">
         We Dance, We Wrestle, We Laugh, We Meme while the market cries.
       </p>
-      <div className="mt-10 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+      <div className="flex flex-col items-center justify-center mt-10 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
         <a
           href="#videos"
-          className="w-full sm:w-auto bg-yellow-400 text-black font-bold text-lg py-4 px-10 rounded-full transform hover:scale-105 transition-transform duration-300"
+          className="w-full px-10 py-4 text-lg font-bold text-black transition-transform duration-300 transform bg-yellow-400 rounded-full sm:w-auto hover:scale-105"
         >
           Watch the Madness
         </a>
         <a
           href="#community"
-          className="w-full sm:w-auto bg-pink-500 text-white font-bold text-lg py-4 px-10 rounded-full transform hover:scale-105 transition-transform duration-300"
+          className="w-full px-10 py-4 text-lg font-bold text-white transition-transform duration-300 transform bg-pink-500 rounded-full sm:w-auto hover:scale-105"
         >
           Join the Movement
         </a>
@@ -52,20 +129,20 @@ const VideoSection = () => {
     "zJ_3FXD5VVs",
     "dGHqhZSM6Ho",
     "1gWjHCZ8Aks",
-    "r5K0RHWCwsg",
+    "jaJXxdb2qes",
     "1b9EEP1x12E",
   ];
 
   return (
-    <section id="videos" className="bg-gray-800 py-20 overflow-hidden">
-      <h2 className="text-4xl font-black text-center text-yellow-300 uppercase mb-12 px-4">
+    <section id="videos" className="py-20 overflow-hidden bg-gray-800">
+      <h2 className="px-4 mb-12 text-4xl font-black text-center text-yellow-300 uppercase">
         The Madness
       </h2>
-      <div className="flex overflow-x-auto space-x-8 pb-4 no-scrollbar px-4 md:px-8">
+      <div className="flex px-4 pb-4 space-x-8 overflow-x-auto no-scrollbar md:px-8">
         {youtubeVideoIds.map((id) => (
           <div
             key={id}
-            className="flex-shrink-0 w-80 md:w-96 rounded-xl overflow-hidden shadow-2xl border-2 border-pink-500/50 transform hover:scale-105 transition-transform duration-300"
+            className="flex-shrink-0 overflow-hidden transition-transform duration-300 transform border-2 shadow-2xl w-80 md:w-96 rounded-xl border-pink-500/50 hover:scale-105"
           >
             <div
               className="relative w-full"
@@ -89,11 +166,11 @@ const VideoSection = () => {
 
 // Component for the About section
 const AboutSection = () => (
-  <section id="about" className="about-bg py-20 px-4 text-center">
+  <section id="about" className="px-4 py-20 text-center about-bg">
     <h2 className="text-4xl font-black text-gray-800">
       It's the Tenge Tenge Movement
     </h2>
-    <p className="font-comic text-xl md:text-2xl mt-6 max-w-3xl mx-auto leading-relaxed text-gray-700">
+    <p className="max-w-3xl mx-auto mt-6 text-xl leading-relaxed text-gray-700 font-comic md:text-2xl">
       Tenge Tenge Movement isn’t just about vibes; it’s a global wave of joy,
       laughter, and pure, unapologetic fun.
       <br />
@@ -109,7 +186,7 @@ const AboutSection = () => (
       Just real people, real energy, and a movement built to lift spirits when
       the market can’t.
     </p>
-    <div className="mt-16 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid max-w-5xl grid-cols-1 gap-8 mx-auto mt-16 md:grid-cols-3">
       <CharacterCard
         imgSrc="https://placehold.co/150x150/f43f5e/ffffff?text=TENGE&font=comic"
         name="Tenge – The Rebellious Nephew"
@@ -134,15 +211,15 @@ const AboutSection = () => (
 
 // Component for the User Submission banner
 const SubmissionBanner = () => (
-  <section id="community" className="py-12 px-4 bg-gray-900">
-    <div className="submission-banner text-center py-12 px-6 rounded-3xl shadow-2xl">
+  <section id="community" className="px-4 py-12 bg-gray-900">
+    <div className="px-6 py-12 text-center shadow-2xl submission-banner rounded-3xl">
       <h2
-        className="text-4xl md:text-5xl font-black text-gray-900"
+        className="text-4xl font-black text-gray-900 md:text-5xl"
         style={{ textShadow: "2px 2px 4px rgba(255,255,255,0.5)" }}
       >
         Want to Get Featured? <br /> Show us your Vibes!
       </h2>
-      <p className="text-gray-800 font-bold text-lg mt-4">
+      <p className="mt-4 text-lg font-bold text-gray-800">
         Dance, meme, wrestle, roast.
         <br />
         If you vibe hard enough, we’ll repost you.
@@ -152,11 +229,11 @@ const SubmissionBanner = () => (
           href="https://x.com/intent/tweet?text=%23TengeTenge%20%40OfficialTenge%20"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gray-900 text-white font-bold text-lg py-4 px-10 rounded-full transform hover:scale-105 transition-transform duration-300 inline-block"
+          className="inline-block px-10 py-4 text-lg font-bold text-white transition-transform duration-300 transform bg-gray-900 rounded-full hover:scale-105"
         >
           Submit Your Vibe
         </a>
-        <p className="text-gray-800 font-semibold mt-4">
+        <p className="mt-4 font-semibold text-gray-800">
           Post on X with #TengeTenge & tag @OfficialTenge
         </p>
       </div>
@@ -166,12 +243,15 @@ const SubmissionBanner = () => (
 
 // Component for the Footer
 const Footer = () => (
-  <footer className="bg-gray-900 text-white text-center py-12 px-4">
+  <footer
+    id="contact"
+    className="px-4 py-12 text-center text-white bg-gray-900"
+  >
     <a
       href="https://x.com/OfficialTenge"
       target="_blank"
       rel="noopener noreferrer"
-      className="transform hover:scale-110 transition-transform inline-block mb-4"
+      className="inline-block mb-4 transition-transform transform hover:scale-110"
     >
       <svg
         className="w-8 h-8"
@@ -249,9 +329,13 @@ export default function App() {
             `}</style>
 
       <div className="bg-gray-900">
+        <Navbar />
+        <CustomCursor />
+        <DancingBoy />
         <HeroSection />
         <VideoSection />
         <AboutSection />
+        <EventsSection />
         <SubmissionBanner />
         <Footer />
       </div>
