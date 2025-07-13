@@ -15,7 +15,7 @@ const TokenomicsSection = () => {
         <div
           style={{ display: "flex", width: "100%", justifyContent: "center" }}
         >
-          <img src={tokenpic} />
+          <img src={tokenpic} alt="token info" />
         </div>
         {/* <table className="tokenomics-table">
           <thead>

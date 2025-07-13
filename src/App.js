@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <header className="tt-navbar">
       <div className="flex items-center tt-logo ">
-        <img src={applogo} className="w-16 h-auto" /> Tengetenge
+        <img src={applogo} className="w-16 h-auto" alt="logo app" /> Tengetenge
       </div>
       <nav className={`tt-menu ${menuOpen ? "active" : ""}`}>
         <a href="#home">Home</a>
@@ -534,7 +534,7 @@ export default function App() {
         <AboutSection />
         <ContractSection />
         <HowTo />
-        {/* <Roadmap /> */}
+        <Roadmap />
         <TokenomicsSection />
         <EventsSection />
         <SubmissionBanner />
