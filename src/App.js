@@ -534,7 +534,7 @@ export default function App() {
         <AboutSection />
         <ContractSection />
         <HowTo />
-        <Roadmap />
+        {/* <Roadmap /> */}
         <TokenomicsSection />
         <EventsSection />
         <SubmissionBanner />
