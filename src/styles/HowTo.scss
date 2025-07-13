@@ -1,0 +1,62 @@
+.tilt-left {
+  transform: rotate(-10deg);
+}
+.tilt-right {
+  transform: rotate(10deg);
+}
+.s-line {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+}
+.s-line::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 60px;
+  background: white;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+  .step-card {
+    transform: none !important;
+  }
+}
+
+.step-card {
+  position: relative;
+  background: rgba(150, 64, 221, 0.142);
+  border: 3px solid transparent;
+  border-image: repeating-linear-gradient(
+      -45deg,
+      #ffffff40,
+      #ffffff40 10px,
+      transparent 10px,
+      transparent 20px
+    )
+    1;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 1rem;
+  border-radius: 1.25rem;
+  color: white;
+  max-width: 18rem;
+  width: 100%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+  }
+
+  @media (max-width: 768px) {
+    transform: none !important;
+    border-radius: 1rem;
+  }
+}

@@ -1,0 +1,82 @@
+.contract-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  padding: 2rem;
+  background: linear-gradient(45deg, #15171f, #25183d, #15171f);
+  background-size: 400% 400%;
+  animation: gradient-animation 10s ease infinite;
+
+  .contract-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff; /* White */
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .address-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    /*White*/
+    border-radius: 50px;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    .address-box {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+
+      .address-text {
+        flex-grow: 1;
+        color: #001f54; /* Navy Blue */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .copy-button {
+        padding: 1.1rem 1rem;
+        color: #ffffff;
+        /*White*/
+        background: rgba(106, 13, 173, 0.6);
+        /*FrostyTransparentPurple*/
+        border: none;
+        border-radius: 50px;
+        backdrop-filter: blur(8px);
+        border: #6a0dad 2px solid;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background: #15033ddd; /* Slightly darker frosty purple */
+      }
+    }
+  }
+}
+
+.contract-description {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #ffffff; /* White */
+
+  h6 {
+    font-size: 14px;
+    margin: 0;
+    color: #ffffff; /* White */
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

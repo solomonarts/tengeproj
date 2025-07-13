@@ -97,7 +97,7 @@
   animation: dance-across 10s linear forwards;
   -webkit-animation: dance-across 10s linear forwards;
   img {
-    width: 150px;
+    width: 200px;
     height: auto;
   }
 }
@@ -109,4 +109,10 @@
   100% {
     left: 100vw;
   }
+}
+
+.crypto-card {
+  background: #a01ba028;
+  backdrop-filter: blur(35px);
+  border: 1px solid rgba(255, 255, 255, 0.442);
 }
