@@ -12,7 +12,7 @@ import tengelogo from "./assets/icons/tengelogo.png";
 import heyilogo from "./assets/icons/heyi.JPG";
 import czlogo from "./assets/icons/czbnb.JPG";
 import TokenomicsSection from "./components/TokenomicsSection";
-import { MdArrowRight } from "react-icons/md";
+// import { MdArrowRight } from "react-icons/md";
 import Microlink from "@microlink/react";
 
 const Navbar = () => {
@@ -28,10 +28,10 @@ const Navbar = () => {
         <a href="#about">About</a>
         <a href="#contract">Contract</a>
         <a href="#how-to">How to Buy</a>
-        <a href="#roadmap">Roadmap</a>
+        {/* <a href="#roadmap">Roadmap</a>
         <a href="#tokenomics">Tokenomics</a>
         <a href="#events">Events</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Contact</a> */}
       </nav>
       <div
         className="tt-menu-toggle"
@@ -228,38 +228,85 @@ const CharacterCard = ({ imgSrc, name, description, bgColor }) => (
 );
 
 // Component for the main Hero section
-const HeroSection = () => (
-  <section
-    id="home"
-    className="relative px-4 py-20 text-center content-center justify-center flex flex-col h-[70vh]
+const HeroSection = () => {
+  const [address] = useState("0x1234...abcd");
+  const [api, contextHolder] = notification.useNotification();
+
+  const openNotification = () => {
+    api.info({
+      message: "Notification",
+      description: "Address Copied to clipboard",
+      placement: "bottomLeft",
+    });
+  };
+
+  const contextValue = useMemo(
+    () => ({
+      name: "Ant Design",
+    }),
+    []
+  );
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(address);
+    openNotification();
+  };
+  return (
+    <section
+      id="home"
+      className="relative px-4 py-20 text-center content-center justify-center flex flex-col h-[70vh]
      text-[#f8f9fa] bg-[#0d0f1a]"
-  >
-    <div className="relative z-10">
-      <h1 className="text-4xl font-black leading-tight uppercase md:text-6xl">
-        Crypto is too serious. <br />{" "}
-        <span className="text-[#ffd93d]">Tenge Tenge Movement</span> is here to
-        mess things up.
-      </h1>
-      <p className="mt-4 text-lg font-bold md:text-2xl">
-        We Dance, We Wrestle, We Laugh, We Meme while the market cries.
-      </p>
-      <div className="flex flex-col items-center justify-center mt-10 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
-        <a
-          href="#videos"
-          className="w-full px-10 py-4 text-lg font-bold text-black transition-transform duration-300 transform bg-yellow-400 rounded-full sm:w-auto hover:scale-105"
-        >
-          Watch the Madness
-        </a>
-        <a
-          href="#community"
-          className="w-full px-10 py-4 text-lg font-bold text-white transition-transform duration-300 transform bg-pink-500 rounded-full sm:w-auto hover:scale-105"
-        >
-          Join the Movement
-        </a>
+    >
+      <div className="relative z-10">
+        <h1 className="text-4xl font-black leading-tight uppercase md:text-6xl">
+          Crypto is too serious. <br />{" "}
+          <span className="text-[#ffd93d]">Tenge Tenge Movement</span> is here
+          to mess things up.
+        </h1>
+        <p className="mt-4 text-lg font-bold md:text-2xl">
+          We Dance, We Wrestle, We Laugh, We Meme while the market cries.
+        </p>
+        <div className="flex flex-col items-center justify-center mt-10 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
+          <a
+            href="#videos"
+            className="w-full px-10 py-4 text-lg font-bold text-black transition-transform duration-300 transform bg-yellow-400 rounded-full sm:w-auto hover:scale-105"
+          >
+            Watch the Madness
+          </a>
+          <a
+            href="#community"
+            className="w-full px-10 py-4 text-lg font-bold text-white transition-transform duration-300 transform bg-pink-500 rounded-full sm:w-auto hover:scale-105"
+          >
+            Join the Movement
+          </a>
+        </div>
+
+        <Context.Provider value={contextValue}>
+          {contextHolder}
+          <div className="flex flex-col items-center justify-center mt-14">
+            <div className="address-container">
+              <div className="address-box">
+                <span className="address-text">{address}</span>
+                <button className="copy-button" onClick={handleCopy}>
+                  Copy Address
+                </button>
+              </div>
+            </div>
+            <div className="contract-description">
+              {/* <h4 style={{ fontSize: "1.25rem" }}>
+                Crypto Community, it’s time to Dance, have fun, Vibe, shoot to
+                the Moon!
+              </h4> */}
+              {/* <h6>
+                This is just for fun. Don’t take us seriously unless you are CZ.
+              </h6> */}
+            </div>
+          </div>
+        </Context.Provider>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 // --- UPDATED COMPONENT ---
 // Component for the YouTube Video Section
