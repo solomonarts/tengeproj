@@ -80,7 +80,7 @@ const EventsSection = () => {
   return (
     <div id="events" className="events-section">
       <h1 className="text-[38px] md:text-[54px] lg:text-[80px] font-bold">
-        Upcoming Events
+        Events
       </h1>
       <p className="mb-8 text-sm text-gray-400">
         We reside where the Fun Lives!!!

@@ -12,6 +12,8 @@ import tengelogo from "./assets/icons/tengelogo.png";
 import heyilogo from "./assets/icons/heyi.JPG";
 import czlogo from "./assets/icons/czbnb.JPG";
 import TokenomicsSection from "./components/TokenomicsSection";
+import { MdArrowRight } from "react-icons/md";
+import Microlink from "@microlink/react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -114,23 +116,18 @@ const Roadmap = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div>
+            {/* <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div> */}
 
-            <div>
+            <div className="flex flex-col items-center content-center justify-center gap-4 lg:grid lg:grid-cols-5 lg:grid-flow-row">
               {roadmapData.map((item, index) => (
-                <div
-                  key={index}
-                  className={`flex items-center ${
-                    index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                  }`}
-                >
+                <div key={index} className="flex">
                   <div
-                    className={`w-1/2 ${
-                      index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
-                    }`}
+                  // className={`w-1/2 ${
+                  //   index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
+                  // }`}
                   >
                     <Card
-                      className={`crypto-card ${
+                      className={`crypto-card w-full ${
                         item.status === "completed"
                           ? "border-green-500/30"
                           : item.status === "in-progress"
@@ -160,7 +157,7 @@ const Roadmap = () => {
                           )}
                         </div>
                         <h3
-                          className={`mb-1 text-[26px] font-semibold ${
+                          className={`mb-1 text-[30px] font-semibold ${
                             item.status === "completed"
                               ? "text-green-400"
                               : item.status === "in-progress"
@@ -182,21 +179,22 @@ const Roadmap = () => {
                   </div>
 
                   {/* Timeline dot */}
-                  <div
-                    className={`relative z-10 w-4 h-4 rounded-full border-2 ${
+                  <MdArrowRight
+                    className={`relative z-10 m-auto ${
                       item.status === "completed"
-                        ? "bg-green-500 border-green-500"
+                        ? "text-green-500"
                         : item.status === "in-progress"
-                        ? "bg-yellow-500 border-yellow-500"
+                        ? "text-yellow-500"
                         : item.status === "upcoming"
-                        ? "bg-blue-500 border-blue-500"
+                        ? "text-blue-500"
                         : item.status === "comingsoon"
-                        ? "bg-purple-600 border-purple-600"
-                        : "bg-red-500 border-red-500"
+                        ? "text-purple-600"
+                        : "hidden"
                     }`}
-                  ></div>
+                    size={80}
+                  />
 
-                  <div className="w-1/2"></div>
+                  {/* <div className="w-1/2"></div> */}
                 </div>
               ))}
             </div>
@@ -323,11 +321,11 @@ const HeroSection = () => (
 // Component for the YouTube Video Section
 const VideoSection = () => {
   const youtubeVideoIds = [
-    "zJ_3FXD5VVs",
-    "dGHqhZSM6Ho",
-    "1gWjHCZ8Aks",
-    "jaJXxdb2qes",
-    "1b9EEP1x12E",
+    "https://x.com/cz_binance/status/1939161131941315030?s=52",
+    "https://x.com/cz_binance/status/1935224960689258675?s=52",
+    "https://x.com/officialtenge/status/1943357119211729320?s=52",
+    "https://x.com/officialtenge/status/1943898111404867847?s=46",
+    "https://x.com/officialtenge/status/1940527086827110669?s=52",
   ];
 
   return (
@@ -343,16 +341,22 @@ const VideoSection = () => {
           >
             <div
               className="relative w-full"
-              style={{ paddingBottom: "56.25%" }}
+              // style={{ paddingBottom: "56.25%" }}
             >
-              <iframe
+              {/* <iframe
                 className="absolute top-0 left-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${id}`}
+                src="https://x.com/officialtenge/status/1943898111404867847?s=46"
                 title={`Tenge Tenge Video ${id}`}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-              ></iframe>
+              ></iframe> */}
+              <Microlink
+                url={id}
+                size="large"
+                media={["image", "logo"]}
+                // className="bg-black"
+              />
             </div>
           </div>
         ))}
@@ -525,7 +529,7 @@ export default function App() {
                 }
             `}</style>
 
-      <div className="bg-gray-900">
+      <div className="bg-gray-900/20">
         <Navbar />
         <CustomCursor />
         <DancingBoy />
