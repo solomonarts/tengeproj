@@ -115,88 +115,32 @@ const Roadmap = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
-            {/* Timeline line */}
-            {/* <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div> */}
-
-            <div className="flex flex-col items-center content-center justify-center gap-4 lg:grid lg:grid-cols-5 lg:grid-flow-row">
-              {roadmapData.map((item, index) => (
-                <div key={index} className="flex">
-                  <div
-                  // className={`w-1/2 ${
-                  //   index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
-                  // }`}
+            <div className="border-[2px] bg-cyan-900/20 p-10  flex flex-col h-fit items-center justify-center border-double border-white rounded-tl-2xl rounded-br-2xl relative after:absolute after:h-full after:w-full after:border-[2px] after:border-pink-500/60 after:top-0 after:left-0 after:rotate-2 before:absolute before:h-full before:w-full before:border-[2px] before:border-cyan-500/60 before:top-0 before:left-0 before:-rotate-2">
+              <ul>
+                {roadmapData.map((item, index) => (
+                  <li
+                    className="flex w-full justify-between gap-3 text-[20px] font-semibold"
+                    key={index}
                   >
-                    <Card
-                      className={`crypto-card w-full ${
+                    {`Phase ${index + 1}`}
+                    {/* Timeline dot */}
+                    <div
+                      className={`relative z-10 m-auto h-3 w-3 rounded-full ${
                         item.status === "completed"
-                          ? "border-green-500/30"
+                          ? "bg-green-500"
                           : item.status === "in-progress"
-                          ? "border-yellow-500/30"
-                          : "border-gray-600/30"
+                          ? "bg-yellow-500"
+                          : item.status === "upcoming"
+                          ? "bg-blue-500"
+                          : item.status === "comingsoon"
+                          ? "bg-purple-600"
+                          : "bg-red-600"
                       }`}
-                    >
-                      <div className="p-4">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span
-                            className={`px-2 py-1 rounded-full text-xs font-medium ${
-                              item.status === "completed"
-                                ? "bg-green-600/20 text-green-400"
-                                : item.status === "in-progress"
-                                ? "bg-yellow-600/20 text-yellow-400"
-                                : item.status === "upcoming"
-                                ? "bg-blue-500/20 text-blue-500"
-                                : item.status === "comingsoon"
-                                ? "bg-purple-600/20"
-                                : "bg-red-600/20"
-                            }`}
-                          >
-                            {/* {item.quarter} */}
-                          </span>
-                          {item.status === "completed" && (
-                            <span className="text-xs text-green-400">✓</span>
-                          )}
-                        </div>
-                        <h3
-                          className={`mb-1 text-[30px] font-semibold ${
-                            item.status === "completed"
-                              ? "text-green-400"
-                              : item.status === "in-progress"
-                              ? "text-orange-400"
-                              : item.status === "upcoming"
-                              ? "text-blue-500"
-                              : item.status === "comingsoon"
-                              ? "text-purple-600"
-                              : "text-red-400"
-                          }`}
-                        >
-                          {item.title}
-                        </h3>
-                        <p className="text-yellow-400 text-md">
-                          {item.description}
-                        </p>
-                      </div>
-                    </Card>
-                  </div>
-
-                  {/* Timeline dot */}
-                  <MdArrowRight
-                    className={`relative z-10 m-auto ${
-                      item.status === "completed"
-                        ? "text-green-500"
-                        : item.status === "in-progress"
-                        ? "text-yellow-500"
-                        : item.status === "upcoming"
-                        ? "text-blue-500"
-                        : item.status === "comingsoon"
-                        ? "text-purple-600"
-                        : "hidden"
-                    }`}
-                    size={80}
-                  />
-
-                  {/* <div className="w-1/2"></div> */}
-                </div>
-              ))}
+                    ></div>
+                    {item.title}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
