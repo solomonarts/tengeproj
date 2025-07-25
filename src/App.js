@@ -48,7 +48,7 @@ const Context = React.createContext({
 });
 
 const ContractSection = () => {
-  const [address] = useState("0x1234...abcd");
+  const [address] = useState("0x718447E29B90D00461966D01E533Fa1b69574444");
   const [api, contextHolder] = notification.useNotification();
 
   const openNotification = () => {

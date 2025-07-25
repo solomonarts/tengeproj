@@ -97,25 +97,31 @@ const EventsSection = () => {
       </div>
 
       {activeIndex !== null && (
-        <div className="event-modal">
-          <div className="modal-overlay" onClick={closeModal}></div>
-          <div className="modal-content">
-            <button className="close-button" onClick={closeModal}>
-              ×
-            </button>
-            <img src={eventsData[activeIndex].image} alt="event" />
-            <h3>{eventsData[activeIndex].title}</h3>
-            <p>
-              <strong>{eventsData[activeIndex].date}</strong> —{" "}
-              {eventsData[activeIndex].location}
-            </p>
-            <p>{eventsData[activeIndex].description}</p>
-            <div className="slider-controls">
-              <button onClick={prevEvent}>Previous</button>
-              <button onClick={nextEvent}>Next</button>
+        <a
+          href="https://x.com/OfficialTenge/status/1944841112784658910"
+          target="_blank"
+          rel="noreferrer noreopener"
+        >
+          <div className="event-modal">
+            <div className="modal-overlay" onClick={closeModal}></div>
+            <div className="modal-content">
+              <button className="close-button" onClick={closeModal}>
+                ×
+              </button>
+              <img src={eventsData[activeIndex].image} alt="event" />
+              <h3>{eventsData[activeIndex].title}</h3>
+              <p>
+                <strong>{eventsData[activeIndex].date}</strong> —{" "}
+                {eventsData[activeIndex].location}
+              </p>
+              <p>{eventsData[activeIndex].description}</p>
+              <div className="slider-controls">
+                <button onClick={prevEvent}>Previous</button>
+                <button onClick={nextEvent}>Next</button>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       )}
 
       {/* <div
