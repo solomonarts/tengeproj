@@ -229,7 +229,7 @@ const CharacterCard = ({ imgSrc, name, description, bgColor }) => (
 
 // Component for the main Hero section
 const HeroSection = () => {
-  const [address] = useState("0x1234...abcd");
+  const [address] = useState("0x718447E29B90D00461966D01E533Fa1b69574444");
   const [api, contextHolder] = notification.useNotification();
 
   const openNotification = () => {
