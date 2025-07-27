@@ -14,6 +14,7 @@ import czlogo from "./assets/icons/czbnb.JPG";
 import TokenomicsSection from "./components/TokenomicsSection";
 // import { MdArrowRight } from "react-icons/md";
 import Microlink from "@microlink/react";
+import { FaTiktok, FaYoutube } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -254,7 +255,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative px-4 py-20 text-center content-center justify-center flex flex-col h-[70vh]
+      className="relative px-4 py-20 text-center content-center justify-center flex flex-col min-h-[70vh]
      text-[#f8f9fa] bg-[#0d0f1a]"
     >
       <div className="relative z-10">
@@ -303,6 +304,40 @@ const HeroSection = () => {
             </div>
           </div>
         </Context.Provider>
+
+        <div className="flex justify-center items-center p-3 w-1/2 md:w-1/4 gap-5 m-auto border-[1px] rounded-full">
+          <a
+            href="https://x.com/OfficialTenge"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block transition-transform transform hover:scale-110"
+          >
+            <svg
+              className="w-8 h-8"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+            </svg>
+          </a>
+          <a
+            href="https://youtube.com/@rangotengetenge_official?si=x29Drrt-92IKJx5l"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block transition-transform transform hover:scale-110"
+          >
+            <FaYoutube size={30} />
+          </a>
+          <a
+            href="https://www.tiktok.com/@rango_tenge_tenge_ofical?_t=ZM-8yNNZuuTSqb&_r=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block transition-transform transform hover:scale-110"
+          >
+            <FaTiktok size={27} />
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -439,21 +474,39 @@ const Footer = () => (
     id="contact"
     className="px-4 py-12 text-center text-white bg-gray-900"
   >
-    <a
-      href="https://x.com/OfficialTenge"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block mb-4 transition-transform transform hover:scale-110"
-    >
-      <svg
-        className="w-8 h-8"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
+    <div className="flex justify-center gap-5">
+      <a
+        href="https://x.com/OfficialTenge"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mb-4 transition-transform transform hover:scale-110"
       >
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-      </svg>
-    </a>
+        <svg
+          className="w-8 h-8"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+        </svg>
+      </a>
+      <a
+        href="https://youtube.com/@rangotengetenge_official?si=x29Drrt-92IKJx5l"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mb-4 transition-transform transform hover:scale-110"
+      >
+        <FaYoutube size={30} />
+      </a>
+      <a
+        href="https://www.tiktok.com/@rango_tenge_tenge_ofical?_t=ZM-8yNNZuuTSqb&_r=1"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mb-4 transition-transform transform hover:scale-110"
+      >
+        <FaTiktok size={27} />
+      </a>
+    </div>
     <p className="text-sm opacity-60">
       Disclaimer: This is just for fun. Don’t take us seriously unless you are
       CZ.
