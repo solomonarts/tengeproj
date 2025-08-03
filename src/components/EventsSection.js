@@ -12,6 +12,17 @@ const eventsData = [
     location: "Mukono",
     image: sgwposter,
     description: "Join us as we celebrate Binance@8 in style.",
+    url: "https://x.com/OfficialTenge/status/1944841112784658910",
+  },
+  {
+    id: 2,
+    title: "Giggle Experience with Tenge",
+    date: "August 3, 2025",
+    location: "Kampala",
+    image:
+      "https://res.cloudinary.com/divny0pif/image/upload/v1754252214/giggle_copy_txliui.jpg",
+    description: "Free Education with Giggle Accademy. One child at a time.",
+    url: "https://x.com/officialtenge/status/1952081899528106207?s=46",
   },
   // {
   //   id: 2,
@@ -46,12 +57,14 @@ const EventCard = ({ event, index, onClick }) => {
       transition={{ duration: 0.5, delay: index * 0.2 }}
     >
       <img src={event.image} alt={event.title} className="h-full object-fit" />
-      <div className="event-info">
-        <h3>{event.title}</h3>
-        <p>
-          {event.date} — {event.location}
-        </p>
-      </div>
+      <a href={event.url} target="_blank" rel="noreferrer noreopener">
+        <div className="event-info">
+          <h3>{event.title}</h3>
+          <p>
+            {event.date} — {event.location}
+          </p>
+        </div>
+      </a>
     </motion.div>
   );
 };
@@ -97,31 +110,25 @@ const EventsSection = () => {
       </div>
 
       {activeIndex !== null && (
-        <a
-          href="https://x.com/OfficialTenge/status/1944841112784658910"
-          target="_blank"
-          rel="noreferrer noreopener"
-        >
-          <div className="event-modal">
-            <div className="modal-overlay" onClick={closeModal}></div>
-            <div className="modal-content">
-              <button className="close-button" onClick={closeModal}>
-                ×
-              </button>
-              <img src={eventsData[activeIndex].image} alt="event" />
-              <h3>{eventsData[activeIndex].title}</h3>
-              <p>
-                <strong>{eventsData[activeIndex].date}</strong> —{" "}
-                {eventsData[activeIndex].location}
-              </p>
-              <p>{eventsData[activeIndex].description}</p>
-              <div className="slider-controls">
-                <button onClick={prevEvent}>Previous</button>
-                <button onClick={nextEvent}>Next</button>
-              </div>
+        <div className="event-modal">
+          <div className="modal-overlay" onClick={closeModal}></div>
+          <div className="modal-content">
+            <button className="close-button" onClick={closeModal}>
+              ×
+            </button>
+            <img src={eventsData[activeIndex].image} alt="event" />
+            <h3>{eventsData[activeIndex].title}</h3>
+            <p>
+              <strong>{eventsData[activeIndex].date}</strong> —{" "}
+              {eventsData[activeIndex].location}
+            </p>
+            <p>{eventsData[activeIndex].description}</p>
+            <div className="slider-controls">
+              <button onClick={prevEvent}>Previous</button>
+              <button onClick={nextEvent}>Next</button>
             </div>
           </div>
-        </a>
+        </div>
       )}
 
       {/* <div
