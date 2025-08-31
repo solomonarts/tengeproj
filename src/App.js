@@ -14,7 +14,7 @@ import czlogo from "./assets/icons/czbnb.JPG";
 import TokenomicsSection from "./components/TokenomicsSection";
 // import { MdArrowRight } from "react-icons/md";
 import Microlink from "@microlink/react";
-import { FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaTelegram, FaTiktok, FaYoutube } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -337,6 +337,14 @@ const HeroSection = () => {
           >
             <FaTiktok size={27} />
           </a>
+          <a
+            href="https://t.me/theofficialtengehttps://t.me/theofficialtenge"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block transition-transform transform hover:scale-110"
+          >
+            <FaTelegram size={27} />
+          </a>
         </div>
       </div>
     </section>
@@ -505,6 +513,14 @@ const Footer = () => (
         className="inline-block mb-4 transition-transform transform hover:scale-110"
       >
         <FaTiktok size={27} />
+      </a>
+      <a
+        href="https://t.me/theofficialtenge"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mb-4 transition-transform transform hover:scale-110"
+      >
+        <FaTelegram size={27} />
       </a>
     </div>
     <p className="text-sm opacity-60">
