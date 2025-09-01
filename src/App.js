@@ -353,6 +353,7 @@ const HeroSection = () => {
 
 // --- UPDATED COMPONENT ---
 // Component for the YouTube Video Section
+// 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
 const VideoSection = () => {
   const youtubeVideoIds = [
     "https://x.com/cz_binance/status/1939161131941315030?s=52",
