@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.1bb697c1.css",
-    "main.js": "./static/js/main.0d1249ae.js",
+    "main.css": "./static/css/main.2a68b088.css",
+    "main.js": "./static/js/main.bc5977b3.js",
     "static/js/453.37607d8e.chunk.js": "./static/js/453.37607d8e.chunk.js",
     "static/media/tenge2.gif": "./static/media/tenge2.6e5c6b4e6de7e7b90181.gif",
     "static/media/tengebg.png": "./static/media/tengebg.0dded441f6bd786788ed.png",
@@ -9,13 +9,14 @@
     "static/media/tengelogo.png": "./static/media/tengelogo.57d8a5667f4f3ba65067.png",
     "static/media/czbnb.JPG": "./static/media/czbnb.df5d4549b8d7313cbfb9.JPG",
     "static/media/heyi.JPG": "./static/media/heyi.84e76e70387e35ab035e.JPG",
+    "static/media/qrcode1.jpg": "./static/media/qrcode1.f19ecccff0882d593951.jpg",
     "index.html": "./index.html",
-    "main.1bb697c1.css.map": "./static/css/main.1bb697c1.css.map",
-    "main.0d1249ae.js.map": "./static/js/main.0d1249ae.js.map",
+    "main.2a68b088.css.map": "./static/css/main.2a68b088.css.map",
+    "main.bc5977b3.js.map": "./static/js/main.bc5977b3.js.map",
     "453.37607d8e.chunk.js.map": "./static/js/453.37607d8e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1bb697c1.css",
-    "static/js/main.0d1249ae.js"
+    "static/css/main.2a68b088.css",
+    "static/js/main.bc5977b3.js"
   ]
 }
