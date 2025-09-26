@@ -15,6 +15,7 @@ import TokenomicsSection from "./components/TokenomicsSection";
 // import { MdArrowRight } from "react-icons/md";
 import Microlink from "@microlink/react";
 import { FaTelegram, FaTiktok, FaYoutube } from "react-icons/fa";
+import { NewHero } from "./components/NewHero";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -593,7 +594,8 @@ export default function App() {
         <Navbar />
         <CustomCursor />
         <DancingBoy />
-        <HeroSection />
+        {/* <HeroSection /> */}
+        <NewHero />
         <VideoSection />
         <AboutSection />
         <ContractSection />
